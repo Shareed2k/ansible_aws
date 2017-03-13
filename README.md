@@ -9,3 +9,9 @@ Ansible : sudo pip install ansible
 Boto : sudo pip install boto
 AWS CLI : sudo pip install awscli
 ```
+
+### Run the playbook :
+
+```
+ansible-playbook playbook.yml -i inventory -e @vars.yml
+```
