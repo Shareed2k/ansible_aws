@@ -1,5 +1,13 @@
 ---
 - hosts: local
+  gather_facts: false
   roles:
     - vpc
     - openvpn
+    - ec2
+
+- hosts: ec2hosts
+  remote_user: ubuntu
+  become: yes
+  roles:
+    - swarm

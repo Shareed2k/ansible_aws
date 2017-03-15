@@ -1,0 +1,10 @@
+- name: Configure instance
+  hosts: ec2hosts
+  gather_facts: yes
+  remote_user: ubuntu
+  become: True
+  become_user: root
+  become_method: sudo
+  roles:
+    - ec2
+    - swarm
